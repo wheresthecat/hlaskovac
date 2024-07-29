@@ -17,11 +17,12 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <ListBox Name="listBoxQuotesList" Grid.Column="0" Grid.Row="0" ></ListBox>
+        <ListBox Name="listBoxQuotesList" Grid.Column="0" Grid.Row="0"></ListBox>
 
         <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1">
-            <Button Name="buttonAddQuote" Height="32" Width="64" Margin="5">Add Quote</Button>
+            <Button Name="buttonAddQuote" Height="32" Width="64" Margin="5" Click="buttonAddQuote_Click">Add Quote</Button>
             <Button Name="buttonDeleteQuote"  Height="32" Width="80" Margin="5">Delete Quote</Button>
+            <Button Name="buttonRefresh" Height="32" Width="48" Margin="5" Click="buttonRefresh_Click">Refresh</Button>
         </StackPanel>
 
         <Grid Grid.Column="1" Grid.Row="0">
