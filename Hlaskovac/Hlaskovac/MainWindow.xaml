@@ -5,8 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hlaskovac"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Hlaskovac" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <ListBox Name="listBoxQuotesList" Grid.Column="0" Grid.Row="0" ></ListBox>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1">
+            <Button Name="buttonAddQuote" Height="32" Width="64" Margin="5">Add Quote</Button>
+            <Button Name="buttonDeleteQuote"  Height="32" Width="80" Margin="5">Delete Quote</Button>
+        </StackPanel>
+
+        <Grid Grid.Column="1" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="64"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Vertical" Grid.Column="0">
+                <Label Content="Title:"/>
+                <Label Content="Quote:"/>
+                <Label Content="Author:"/>
+                <Label Content="Added:"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Grid.Column="1">
+                <Label Name="labelTitle" Content="_"/>
+                <Label Name="labelQuote" Content="_"/>
+                <Label Name="labelAuthor" Content="_"/>
+                <Label Name="labelTimeStamp" Content="_"/>
+            </StackPanel>
+
+        </Grid>
+
+
 
     </Grid>
 </Window>
